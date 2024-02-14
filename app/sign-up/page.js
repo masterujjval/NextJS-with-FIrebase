@@ -3,6 +3,7 @@ import React from "react";
 import {useRef} from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from '@/app/firebase/config';
+import { redirect } from "next/dist/server/api-utils";
 
 const signup =()=>{
  
@@ -21,7 +22,8 @@ const signup =()=>{
     // Signed up 
     const user = userCredential.user;
     // ...
-    alert("Successfully signup");
+    alert("Successfully signup redirecting to Log in page");
+    window.location.href = './log-in/';
   })
   .catch((error) => {
     const errorCode = error.code;

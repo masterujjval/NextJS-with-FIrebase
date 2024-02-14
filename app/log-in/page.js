@@ -21,7 +21,10 @@ const login =()=>{
     const user = userCredential.user;
     // ...
     console.log(user)
-    alert(`Welcome ${user.email}`)
+    alert(`Welcome ${user.email} redirecting to GeeksForGeeks`)
+
+    //router to next page
+    window.location.href = 'https://www.geeksforgeeks.org';
 
   })
   .catch((error) => {
