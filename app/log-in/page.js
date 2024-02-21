@@ -24,7 +24,7 @@ const login =()=>{
     alert(`Welcome ${user.email} redirecting to GeeksForGeeks`)
 
     //router to next page
-    window.location.href = 'https://www.geeksforgeeks.org';
+    window.location.href = 'https://github.com/masterujjval';
 
   })
   .catch((error) => {
@@ -44,11 +44,18 @@ const login =()=>{
         <center>
 
         <h1>Log in screen</h1><br/><br/>
+
         <form onSubmit={login}>
+        
         <input type="email" placeholder="Enter your email" ref={logemailRef} style={{ color: 'green' }}/><br/><br></br>
+        
         <input type="password" placeholder="Enter your password" ref={logpasswordRef} style={{ color: 'green' }}/><br/>
+        
+
         <br/><button type="submit" className="w-200 p-3 bg-indigo-600 rounded text-white hover:bg-indigo-500">Log In</button>
+       
         </form>
+       
         </center>
 
         </div>
